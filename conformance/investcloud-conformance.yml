@@ -1,0 +1,40 @@
+generated: '2026-08-23'
+method: searched
+source: >-
+  https://www.investcloud.com/ sitemap walk (111 URLs), https://developer.investcloud.com/,
+  and probes of trust./security./status. subdomains
+note: >-
+  Nothing is assertable. InvestCloud publishes no machine-readable contract, so no standard can be
+  derived from a spec, and its public marketing site carries no security, compliance, trust-center
+  or certifications page — the full page + post + case-study sitemap (111 URLs) contains no
+  security, compliance, SOC, ISO, or trust page, and trust.investcloud.com, security.investcloud.com
+  and status.investcloud.com do not resolve. Every entry below is therefore recorded as unknown,
+  not false: absence of a public claim is not evidence that the control does not exist internally.
+  No Compliance pointer is emitted, because InvestCloud publishes no compliance program to point at.
+standards:
+- id: oauth2
+  conforms: unknown
+  evidence: no public specification or auth reference; portal login required
+- id: oidc
+  conforms: unknown
+  evidence: /.well-known/openid-configuration not served on any InvestCloud host
+- id: rfc9457-problem-details
+  conforms: unknown
+  evidence: no public contract to inspect for application/problem+json
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on www.investcloud.com (soft-404 on developer.)
+domain_standard:
+  regime: financial-services / wealth-management
+  shortlist_probed:
+  - {id: fdx, standard: Financial Data Exchange, declared: false, evidence: no public contract or docs claim}
+  - {id: iso-20022, standard: ISO 20022 messaging, declared: false, evidence: no public contract or docs claim}
+  - {id: fix, standard: FIX Protocol, declared: false, evidence: no public contract or docs claim}
+  - {id: open-banking, standard: 'PSD2 / OBIE', declared: false, evidence: not a UK/EU account-servicing surface}
+  result: none-declared
+  note: >-
+    REWARD-ONLY check. InvestCloud's market (wealth management, custodial and market-data
+    aggregation, managed accounts) does have candidate standards, but none is declared in any
+    publicly reachable InvestCloud artifact. Recorded as not-declared, not as non-conformant —
+    the contract that would state it is behind the portal login.
+certifications_published: []

@@ -1,0 +1,27 @@
+generated: '2026-08-23'
+method: searched
+source: >-
+  https://www.investcloud.com/ sitemap walk, https://developer.investcloud.com/,
+  and subdomain probes
+note: >-
+  No versioning policy, deprecation policy, SLA or status page is publicly reachable. Recorded as
+  an honest absence. No StatusPage and no Deprecation pointer is emitted — emitting either would
+  assert a surface InvestCloud does not serve.
+versioning:
+  scheme: unknown
+  current: null
+  docs: null
+  evidence: no public API reference; versioning policy would sit behind the portal login
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  evidence: no public deprecation or Sunset/Deprecation (RFC 8594) policy found
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+status_page_probes:
+- {url: 'https://status.investcloud.com/', status: 0, note: DNS does not resolve}
+- {url: 'https://investcloud.statuspage.io/', status: 200, note: redirects to atlassian.com/software/statuspage marketing — not an InvestCloud status page}
+- {url: 'https://support.investcloud.com/', status: 520, note: host exists but origin errors (Cloudflare 520)}
+deprecated_operations: []

@@ -1,0 +1,17 @@
+generated: '2026-08-23'
+method: searched
+source: https://developer.investcloud.com/ + https://www.investcloud.com/ sitemap walk
+limit_count: 0
+note: >-
+  No rate limits are published. InvestCloud's developer portal advertises a command center to
+  "Track your api usage and manage you application api keys", which implies usage is metered per
+  application key, but every number, window and response header sits behind the portal login. No
+  limit, no burst, no exhaustion status code and no RateLimit-*/X-RateLimit-*/Retry-After header
+  contract could be observed: there is no anonymously callable InvestCloud endpoint to observe one
+  on. Recorded as an explicit zero.
+limits: []
+response_headers: []
+exhaustion_status: null
+evidence:
+- {url: 'https://developer.investcloud.com/', status: 200, note: 'portal landing page advertises API usage tracking; all detail behind login'}
+- {url: 'https://developer.investcloud.com/login/', status: 200, note: login wall}

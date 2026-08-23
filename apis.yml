@@ -1,18 +1,55 @@
 aid: investcloud
 name: InvestCloud
-description: 'InvestCloud is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  InvestCloud is a wealth-management technology company that provides an AI-driven digital
+  wealth platform connecting advisors, financial institutions, asset managers, TAMPs, RIAs and
+  investors across the full investment lifecycle. Its product surface spans front-office advisor
+  and client solutions, a wealth data platform ("Digital Warehouse") that aggregates custodial,
+  market and portfolio data, managed account solutions including the Advisor Programs List (APL)
+  and Private Markets Account, post-trade processing and settlement, revenue management, and the
+  NaviPlan and RetireUp financial planning products acquired with Advicent. InvestCloud markets a
+  developer platform — branded "Wealthsqope Digital Developer" — offering web-service APIs,
+  embeddable widgets, code recipes, client libraries and application API keys, but that platform
+  and its reference documentation sit entirely behind a portal login, and no machine-readable API
+  contract is published publicly.
+image: https://www.investcloud.com/wp-content/uploads/2025/12/cropped-ic_favicon-270x270.png
 url: https://raw.githubusercontent.com/api-evangelist/investcloud/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-23'
 modified: '2026-08-23'
 tags:
 - Company
-apis: []
+- Wealth Management
+- Financial Services
+- Investment Management
+- WealthTech
+- Portfolio Management
+- Financial Planning
+- Managed Accounts
+- Advisor Technology
+- Data Aggregation
+apis:
+- name: Wealthsqope Digital Developer Platform
+  description: >-
+    InvestCloud's developer platform, branded "Wealthsqope Digital Developer". Its own public
+    landing page advertises getting-started guides, "full API docs for web services and embedded
+    widgets", video tutorials, pre-built code recipes, code-generation tools, client libraries for
+    accessing the web services, and a command center for API usage stats and application API keys.
+    Every one of those resources requires a portal login; no reference, no base URL and no
+    machine-readable contract is reachable anonymously. baseURL is deliberately omitted rather than
+    guessed — InvestCloud does not publish one, and api.investcloud.com does not resolve.
+  humanURL: https://developer.investcloud.com/
+  tags:
+  - Wealth Management
+  - Financial Services
+  - Widgets
+  properties:
+  - type: DeveloperPortal
+    url: https://developer.investcloud.com/
+  - type: Login
+    url: https://developer.investcloud.com/login/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -20,4 +57,60 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://forgeglobal.com/investcloud_stock/
+  url: https://www.investcloud.com/
+- type: DeveloperPortal
+  url: https://developer.investcloud.com/
+- type: Login
+  url: https://developer.investcloud.com/login/
+- type: Blog
+  url: https://www.investcloud.com/resources/insights/
+- type: Support
+  url: https://www.investcloud.com/about-us/contact-us/
+- type: TermsOfService
+  url: https://www.investcloud.com/terms-of-service/
+- type: PrivacyPolicy
+  url: https://www.investcloud.com/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/investcloud
+- type: DomainSecurity
+  url: security/investcloud-domain-security.yml
+- type: Authentication
+  url: authentication/investcloud-authentication.yml
+- type: Conformance
+  url: conformance/investcloud-conformance.yml
+- type: Lifecycle
+  url: lifecycle/investcloud-lifecycle.yml
+- type: LLMsTxt
+  url: llms/investcloud-llms.txt
+- type: Packages
+  url: packages/investcloud-packages.yml
+- type: Plans
+  url: plans/investcloud-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/investcloud-rate-limits.yml
+x-enrichment:
+  date: '2026-08-23'
+  status: minimal
+  artifacts_added: 9
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: >-
+    InvestCloud markets a full developer platform at developer.investcloud.com ("Wealthsqope
+    Digital Developer" — API docs for web services and embedded widgets, code recipes, client
+    libraries, application API keys) but the entire portal is a noindex WordPress site behind a
+    username/password login, and every unauthenticated path on it returns the same 33,933-byte
+    landing page, including a nonsense control path.
+  evidence:
+    - url: https://developer.investcloud.com/
+      status: 200
+    - url: https://developer.investcloud.com/login/
+      status: 200
+    - url: https://developer.investcloud.com/openapi.json
+      status: 200
+    - url: https://www.investcloud.com/openapi.json
+      status: 404
+    - url: https://api.investcloud.com/
+      status: 0
+  checked: '2026-08-23'

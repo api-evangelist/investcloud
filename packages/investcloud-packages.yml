@@ -1,0 +1,40 @@
+generated: '2026-08-23'
+method: searched
+source: >-
+  registry.npmjs.org, pypi.org, azuresearch-usnc.nuget.org, rubygems.org, crates.io,
+  packagist.org and search.maven.org queried for investcloud / naviplan / advicent / finantix
+note: >-
+  One first-party package exists and it is NOT an API client library. advicent-branding is a
+  branding/asset package published from an @investcloud.com maintainer address under the Advicent
+  brand InvestCloud acquired in 2020. No SDKs pointer is emitted from this file: InvestCloud's own
+  developer portal advertises "code libraries for accessing our Web Services", but those libraries
+  are distributed behind the portal login and appear in no public registry, so there is no
+  publicly installable InvestCloud API client to count.
+package_count: 1
+sdk_count: 0
+packages:
+- language: javascript
+  registry: npm
+  name: advicent-branding
+  url: https://www.npmjs.com/package/advicent-branding
+  install: npm install advicent-branding
+  official: true
+  official_evidence: >-
+    sole npm maintainer is sscaffidi@investcloud.com; description reads "InvestCloud Branding
+    Packages"; Advicent (NaviPlan) is an InvestCloud brand
+  kind: branding-assets
+  is_api_client: false
+  version: 2.1.18
+  published: '2024-12-09'
+  note: >-
+    Branding/design assets, not an API client. Four published versions; latest 2.1.18 on
+    2024-12-09, unchanged for ~20 months as of this pass. No repository, homepage or license
+    declared in the registry metadata.
+registries_checked:
+- {registry: npm, query: investcloud, results: 1}
+- {registry: pypi, query: 'investcloud, naviplan, finantix', results: 0, note: all 404}
+- {registry: nuget, query: investcloud, results: 0}
+- {registry: rubygems, query: investcloud, results: 0}
+- {registry: crates.io, query: investcloud, results: 0}
+- {registry: packagist, query: investcloud, results: 0}
+- {registry: maven-central, query: investcloud, results: 0}

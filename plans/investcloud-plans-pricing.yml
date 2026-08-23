@@ -1,0 +1,17 @@
+generated: '2026-08-23'
+method: searched
+source: https://www.investcloud.com/ sitemap walk (111 URLs) + https://www.investcloud.com/get-in-touch/
+plan_count: 0
+note: >-
+  InvestCloud publishes no plans, tiers or list pricing of any kind. /pricing/ returns 404 and the
+  complete page + post + case-study sitemap contains no pricing, plans or packaging page. The
+  company sells enterprise wealth-management platform deals through a contact-sales motion:
+  /get-in-touch/ (200) and /about-us/contact-us/ (200) are the published entry points, and the
+  NaviPlan planning product routes to /naviplan/request-a-trial/ (200) rather than to a price.
+  Recorded as an explicit zero rather than omitted.
+model: contact-sales
+plans: []
+evidence:
+- {url: 'https://www.investcloud.com/pricing/', status: 404}
+- {url: 'https://www.investcloud.com/get-in-touch/', status: 200}
+- {url: 'https://www.investcloud.com/naviplan/request-a-trial/', status: 200}

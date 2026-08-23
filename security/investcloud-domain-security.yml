@@ -1,0 +1,29 @@
+generated: '2026-08-23'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.investcloud.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb 12 23:59:59 2027 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: developer.investcloud.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 18 06:30:07 2026 GMT
+  hsts: true
+  hsts_max_age: 15552000
+domains:
+- domain: investcloud.com
+  dnssec: false
+  caa:
+  - 0 issuewild "letsencrypt.org"
+  - 0 issuewild "pki.goog; cansignhttpexchanges=yes"
+  - 0 issuewild "sectigo.com"
+  - 0 issuewild "ssl.com"
+  - 0 iodef "mailto:ac278eb9-d749-49b5-b3f8-1c77c923cd92@identity-protect.org"
+  - 0 issue "amazon.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine

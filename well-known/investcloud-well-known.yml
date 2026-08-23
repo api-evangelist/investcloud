@@ -1,0 +1,62 @@
+generated: '2026-08-23'
+method: probed
+source: live probes of every InvestCloud host reachable from apis.yml
+note: >-
+  Nothing was served. www.investcloud.com returns a genuine 404 for every /.well-known/ path.
+  developer.investcloud.com is a WordPress catch-all that answers HTTP 200 with the identical
+  33,933-byte portal homepage for EVERY path, including a nonsense control path — those 200s are
+  soft-404s, not documents, and are recorded as misses. No WellKnown or SecurityTxt pointer is
+  emitted, because InvestCloud does not serve either surface.
+hit_count: 0
+hosts:
+- host: https://www.investcloud.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  soft_404_control:
+    path: /.well-known/zzz-control-probe-9x8y7z
+    status: 404
+    bytes: 83800
+    verdict: host returns a real 404; negatives above are trustworthy
+- host: https://developer.investcloud.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: soft-404 — body is the portal homepage HTML, byte-identical to the control probe
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: soft-404 — identical portal homepage HTML
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: soft-404 — identical portal homepage HTML
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: soft-404 — identical portal homepage HTML
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: soft-404 — identical portal homepage HTML
+  soft_404_control:
+    path: /.well-known/zzz-control-probe-9x8y7z
+    status: 200
+    bytes: 33933
+    verdict: >-
+      catch-all — a nonsense path returns HTTP 200 with the same 33,933 bytes as every
+      /.well-known/ probe, so no 200 from this host can be counted as a served document

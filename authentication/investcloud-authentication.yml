@@ -1,0 +1,36 @@
+generated: '2026-08-23'
+method: searched
+source: https://developer.investcloud.com/
+docs: https://developer.investcloud.com/
+note: >-
+  DERIVED IS IMPOSSIBLE HERE — InvestCloud publishes no OpenAPI, so there are no securitySchemes to
+  aggregate. What IS knowable is stated on the public landing page of InvestCloud's own developer
+  portal, which advertises a "stats and api keys" command center to "Track your api usage and
+  manage you application api keys". That is a first-party statement that the platform authenticates
+  with per-application API keys. Everything else about the scheme — where the key travels (header,
+  query, or a signed envelope), its parameter name, key rotation, and whether OAuth is offered
+  alongside it — is behind the portal login and is recorded as unknown rather than guessed.
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - unknown
+  oauth2_flows: []
+  confidence: low
+  basis: provider marketing copy on the public portal landing page, not a specification
+schemes:
+- name: application-api-key
+  type: apiKey
+  in: unknown
+  parameter_name: unknown
+  description: >-
+    Per-application API keys issued and managed through the Wealthsqope Digital Developer portal's
+    "stats and api keys" command center.
+  sources:
+  - https://developer.investcloud.com/
+  gated: true
+gaps:
+- API key transport (header vs query vs body) is not publicly documented
+- no public statement on key rotation, expiry, or scoping
+- no evidence either way on OAuth 2.0 / OIDC support
+- no machine-readable securityScheme published anywhere
