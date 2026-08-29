@@ -12,6 +12,17 @@ description: >-
   embeddable widgets, code recipes, client libraries and application API keys, but that platform
   and its reference documentation sit entirely behind a portal login, and no machine-readable API
   contract is published publicly.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.investcloud.com/wp-content/uploads/2025/12/cropped-ic_favicon-270x270.png
 url: https://raw.githubusercontent.com/api-evangelist/investcloud/refs/heads/main/apis.yml
 x-type: company
