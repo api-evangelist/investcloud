@@ -48,10 +48,10 @@ modified: '2026-08-23'
 tags:
 - Company
 - Wealth Management
-- Financial-Services
+- Financial Services
 - Investment Management
 - WealthTech
-- Portfolio-Management
+- Portfolio Management
 - Financial Planning
 - Managed Accounts
 - Advisor Technology
@@ -67,6 +67,8 @@ tags_raw:
 - Managed Accounts
 - Advisor Technology
 - Data Aggregation
+- Financial-Services
+- Portfolio-Management
 apis:
 - name: Wealthsqope Digital Developer Platform
   description: >-
@@ -80,12 +82,13 @@ apis:
   humanURL: https://developer.investcloud.com/
   tags:
   - Wealth Management
-  - Financial-Services
+  - Financial Services
   - Widgets
   tags_raw:
   - Wealth Management
   - Financial Services
   - Widgets
+  - Financial-Services
   properties:
   - type: DeveloperPortal
     url: https://developer.investcloud.com/
