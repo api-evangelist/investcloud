@@ -3,10 +3,17 @@
   "feeds": [
     {
       "source": "https://www.investcloud.com/resources/insights/",
-      "feed_url": "https://www.investcloud.com/comments/feed/",
+      "feed_url": "https://www.investcloud.com/feed/",
       "title": "",
       "saved": 0,
       "method": "discovered"
+    },
+    {
+      "source": "https://www.investcloud.com/comments/feed/",
+      "feed_url": "https://www.investcloud.com/comments/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     },
     {
       "source": "https://developer.investcloud.com/login/",
@@ -17,5 +24,5 @@
     }
   ],
   "post_count": 0,
-  "fetched": "2026-10-10T13:15:00Z"
+  "fetched": "2026-10-17T14:53:57Z"
 }
